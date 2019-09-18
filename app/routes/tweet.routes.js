@@ -5,6 +5,6 @@ module.exports = (app) => {
 
     app.get('/tweet/byHour', tweet.totalPostByHours);
 
-    app.get('/tweet/byUserIdiomCOuntry', tweet.totalPostByUserIdiomCountry);
+    app.get('/tweet/byUserIdiomCountry', tweet.totalPostByUserIdiomCountry);
 
 }

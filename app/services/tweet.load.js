@@ -2,7 +2,8 @@ const service = require('../services/tweet.load.js');
 const PouchDB = require('pouchdb');
 const request = require('request');
 
-const HOST = 'http://localhost:8080/api';
+const HOST = 'https://tweeitback.herokuapp.com/api';
+//http://localhost:8080/api
 
 PouchDB.plugin(require('pouchdb-adapter-memory'));
 var dbByHours = new PouchDB('dbByHours', {

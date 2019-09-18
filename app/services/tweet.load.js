@@ -3,7 +3,6 @@ const PouchDB = require('pouchdb');
 const request = require('request');
 
 const HOST = 'https://tweeitback.herokuapp.com/api';
-//http://localhost:8080/api
 
 PouchDB.plugin(require('pouchdb-adapter-memory'));
 var dbByHours = new PouchDB('dbByHours', {
@@ -32,7 +31,6 @@ exports.loadByHour = () => {
         }, (err, res, body) => {
 
           dbByHours.bulkDocs(body).then(function (result) {
-            // handle result
             resolve(body);
           }).catch(function (err) {
 
@@ -68,7 +66,6 @@ exports.loadtopByFiveFollowers = () => {
         }, (err, res, body) => {
 
           dbFollowers.bulkDocs(body).then(function (result) {
-            // handle result
             resolve(body);
           }).catch(function (err) {
 
@@ -107,7 +104,6 @@ exports.loadBybyUserIdiomCountry = () => {
         }, (err, res, body) => {
 
           dbUserIdiom.bulkDocs(body).then(function (result) {
-            // handle result
             resolve(body);
           }).catch(function (err) {
 
